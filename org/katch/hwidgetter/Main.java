@@ -6,4 +6,6 @@ public class Main {
         GUI gui = new GUI();
         gui.showGui();
     }
+        // Needed thing.
+        public static final String KEY = "verify";
 }
