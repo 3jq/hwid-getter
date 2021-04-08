@@ -21,16 +21,16 @@ public class GUI extends JFrame {
         gui.add(panel);
         panel.setBackground(Color.black);
         panel.add(status);
-        status.setText("Your HWID: " + HWIDGetter.getHwid());
+        status.setText("Your HWID: " + HWIDUtil.getEncryptedHWID(Loader.KEY));
         status.setForeground(Color.lightGray);
         panel.setLayout(null);
         panel.add(button);
         status.setBounds(new Rectangle(new Point(5, 20), status.getPreferredSize()));
-        button.setBounds(new Rectangle(new Point(HWIDGetter.getHwid().length() * 10 + 15, 15), button.getPreferredSize()));
+        button.setBounds(new Rectangle(new Point(HWIDUtil.getEncryptedHWID(Loader.KEY).length() * 10 + 15, 15), button.getPreferredSize()));
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                StringSelection stringSelection = new StringSelection(HWIDGetter.getHwid());
+                StringSelection stringSelection = new StringSelection(HWIDUtil.getEncryptedHWID(Loader.KEY));
                 Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
                 clipboard.setContents(stringSelection, null);
                 status.setText("Copied to clipboard!");
