@@ -12,4 +12,4 @@ For my loader system you need other hwid, but this hwid getter is kinda good bas
 
 # Output
 
-Your HWID is encoded into Base64, so output will look like '0YHQvtGB0Lgg0YXRg9C5INGB0L7RgdC4INGF0YPQuQ=='
+Output is very dependent on key to hwid, so just test it, dude.
